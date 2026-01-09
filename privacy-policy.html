@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Window Estimator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 50px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .app-icon svg {
+            width: 45px;
+            height: 45px;
+            fill: white;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .last-updated {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        h2 {
+            font-size: 1.4em;
+            color: #007AFF;
+            margin: 35px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        ul {
+            margin: 15px 0 20px 25px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #f0e8fd 100%);
+            border-left: 4px solid #007AFF;
+            padding: 20px 25px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #007AFF;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .no-data-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #d4edda;
+            color: #155724;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        
+        .no-data-badge svg {
+            width: 20px;
+            height: 20px;
+            fill: #155724;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .data-table th {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .data-table tr:hover td {
+            background: #f8f9fa;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            justify-content: center;
+        }
+        
+        .contact-section h2::before {
+            display: none;
+        }
+        
+        .contact-email {
+            display: inline-block;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 25px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .data-table {
+                font-size: 0.9em;
+            }
+            
+            .data-table th, .data-table td {
+                padding: 12px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+                    <polyline points="14 2 14 8 20 8" fill="none" stroke="white" stroke-width="2"/>
+                    <line x1="16" y1="13" x2="8" y2="13" stroke="white" stroke-width="2"/>
+                    <line x1="16" y1="17" x2="8" y2="17" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Window Estimator App</p>
+            <span class="last-updated">Last Updated: January 9, 2026</span>
+        </div>
+        
+        <div class="no-data-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            We do not collect, store, or share your personal data
+        </div>
+        
+        <h2>Overview</h2>
+        <p>Window Estimator ("the App") is a professional tool designed for window tinting contractors to create job estimates. We are committed to protecting your privacy and being transparent about our data practices.</p>
+        
+        <div class="highlight-box">
+            <h3>🔒 Your Data Stays With You</h3>
+            <p style="margin-bottom: 0;">All information you enter into Window Estimator is stored locally on your device or in your personal iCloud account (if you enable iCloud sync). We do not operate any servers that collect or have access to your data.</p>
+        </div>
+        
+        <h2>Information You Enter</h2>
+        <p>The App allows you to enter the following information for creating estimates:</p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Purpose</th>
+                    <th>Storage Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Customer names</td>
+                    <td>Identify estimates</td>
+                    <td>Your device only</td>
+                </tr>
+                <tr>
+                    <td>Email addresses</td>
+                    <td>Send estimates via email</td>
+                    <td>Your device only</td>
+                </tr>
+                <tr>
+                    <td>Phone numbers</td>
+                    <td>Send estimates via text</td>
+                    <td>Your device only</td>
+                </tr>
+                <tr>
+                    <td>Addresses</td>
+                    <td>Job location reference</td>
+                    <td>Your device only</td>
+                </tr>
+                <tr>
+                    <td>Pricing & settings</td>
+                    <td>Calculate estimates</td>
+                    <td>Your device only</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Data Storage</h2>
+        <p>All data you enter is stored:</p>
+        <ul>
+            <li><strong>Locally on your device</strong> using iOS secure storage</li>
+            <li><strong>In your personal iCloud account</strong> (only if you enable iCloud sync in Settings)</li>
+        </ul>
+        <p>We do not have access to your iCloud data. Apple's iCloud is protected by your Apple ID and Apple's privacy policies.</p>
+        
+        <h2>What We Don't Do</h2>
+        <ul>
+            <li>❌ We do not collect analytics or usage data</li>
+            <li>❌ We do not use tracking or advertising SDKs</li>
+            <li>❌ We do not sell or share your information</li>
+            <li>❌ We do not have servers that store your data</li>
+            <li>❌ We do not access your camera, location, or contacts</li>
+        </ul>
+        
+        <h2>Third-Party Services</h2>
+        <p>The App uses the following Apple system features:</p>
+        <ul>
+            <li><strong>Mail (optional)</strong> – When you choose to email an estimate, it opens your device's email app</li>
+            <li><strong>Messages (optional)</strong> – When you choose to text an estimate, it opens your device's Messages app</li>
+            <li><strong>iCloud (optional)</strong> – If enabled, syncs your data using your Apple ID</li>
+        </ul>
+        <p>These features use Apple's privacy-protected frameworks and are governed by Apple's privacy policy.</p>
+        
+        <h2>Data Deletion</h2>
+        <p>You have full control over your data:</p>
+        <ul>
+            <li>Delete individual estimates anytime within the App</li>
+            <li>Use "Delete All Data" in Settings to remove everything</li>
+            <li>Uninstalling the App removes all local data</li>
+            <li>iCloud data can be managed in your device's Settings → Apple ID → iCloud</li>
+        </ul>
+        
+        <h2>Children's Privacy</h2>
+        <p>Window Estimator is a business tool not directed at children under 13. We do not knowingly collect information from children.</p>
+        
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected with a new "Last Updated" date at the top of this page.</p>
+        
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or the App, please contact us:</p>
+            <a href="mailto:snrgwa@gmail.com" class="contact-email">snrgwa@gmail.com</a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 Window Estimator. Made with ❤️ in Washington.</p>
+            <p style="margin-top: 10px;">This privacy policy is effective as of January 9, 2026.</p>
+        </div>
+    </div>
+</body>
+</html>
